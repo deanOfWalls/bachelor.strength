@@ -26,7 +26,15 @@ public class FitnessService {
 
 
     private double calculateTDEE(UserModel userModel) {
-        // Placeholder for TDEE calculation
+        String gender = userModel.getGender();
+
+        if(gender.equalsIgnoreCase("male")){
+            return (10 * (userModel.getWeight() / 2.20462) + 6.25 * userModel.getHeight() - 5 * userModel.getAge() + 5) * 1.55;
+        }
+        else if(gender.equalsIgnoreCase("female")){
+            return (10 * (userModel.getWeight() / 2.20462) + 6.25 * userModel.getHeight() - 5 * userModel.getAge() - 161) * 1.55;
+        }
+        else
         return 0;
     }
 
@@ -36,7 +44,9 @@ public class FitnessService {
     }
 
     private int calculateCaloriesForHypertrophy(UserModel userModel) {
-        // Placeholder for hypertrophy calories calculation
-        return 0;
+        double tdee = calculateTDEE(userModel);
+        int caloricSurplus = 500; // A typical surplus for hypertrophy; adjust based on goals
+        return (int) (tdee + caloricSurplus);
     }
+
 }
