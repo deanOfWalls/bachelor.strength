@@ -8,11 +8,11 @@ public class UserModel {
     // Model attributes, constructors, getters, and setters
 
     private int age;
-    private double height; //stored in cm
+    private int height; //stored in cm
     private int weight; //stored in lbs
     private String gender;
 
-    public UserModel(int age, double height, int weight, String gender) {
+    public UserModel(int age, int height, int weight, String gender) {
         this.age = age;
         this.height = height;
         this.weight = weight;
@@ -31,7 +31,7 @@ public class UserModel {
         return height;
     }
 
-    public void setHeight(double height) {
+    public void setHeight(int height) {
         this.height = height;
     }
 
