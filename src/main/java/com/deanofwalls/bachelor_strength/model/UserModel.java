@@ -10,11 +10,13 @@ public class UserModel {
     private int age;
     private double height; //stored in cm
     private int weight; //stored in lbs
+    private String gender;
 
-    public UserModel(int age, double height, int weight) {
+    public UserModel(int age, double height, int weight, String gender) {
         this.age = age;
         this.height = height;
         this.weight = weight;
+        this.gender = gender;
     }
 
     public int getAge() {
@@ -39,5 +41,13 @@ public class UserModel {
 
     public void setWeight(int weight) {
         this.weight = weight;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 }
