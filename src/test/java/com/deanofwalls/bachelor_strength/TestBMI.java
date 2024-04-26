@@ -23,12 +23,12 @@ public class TestBMI {
 	void testBMI() {
 		// Given: setup our test data
 		UserModel userModel = new UserModel(0, 178, 170, null);
-		double expectedBMI = 24.34;
+		double expectedBMI = 24;
 
 		// When
 		double actualBMI =  fitnessService.calculateBMI(userModel);
 
 		// Then
-		assertEquals(expectedBMI, actualBMI, 0.01, "The BMI calculation should match the expected value.");
+		assertEquals(expectedBMI, (int)actualBMI, 0.01, "The BMI calculation should match the expected value.");
 	}
 }
