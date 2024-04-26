@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * Rename this class to reflect its purpose, e.g., PersonController if it manages Person entities.
  */
 @RestController
-public class SomeController {
+public class FitnessController {
 
     @RequestMapping("/")
     public String index() {
