@@ -20,12 +20,12 @@ public class FitnessService {
         return new CalculationsModel(bmi, tdee, recommendedProtein, recommendedCalories);
     }
 
-    private double calculateBMI(UserModel userModel) {
+    public double calculateBMI(UserModel userModel) {
         return (userModel.getWeight() * 0.453592) / (Math.pow(userModel.getHeight() / 100, 2));
     }
 
 
-    private double calculateTDEE(UserModel userModel) {
+    public double calculateTDEE(UserModel userModel) {
         String gender = userModel.getGender();
 
         if(gender.equalsIgnoreCase("male")){
