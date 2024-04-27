@@ -6,6 +6,7 @@ import com.deanofwalls.bachelor_strength.service.FitnessService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -13,7 +14,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * Test class for the application.
  * Rename to reflect the specific tests it contains, e.g., PersonServiceTests for tests related to the PersonService.
  */
-@SpringBootTest
+@SpringBootTest(classes = MainApplication.class)
+@ActiveProfiles("web")
 public class TestBMI {
 
 	@Autowired
@@ -23,12 +25,12 @@ public class TestBMI {
 	void testBMI() {
 		// Given: setup our test data
 		UserModel userModel = new UserModel(0, 178, 170, null);
-		double expectedBMI = 24;
+		int expectedBMI = 24;
 
 		// When
-		double actualBMI =  fitnessService.calculateBMI(userModel);
+		int actualBMI =  fitnessService.calculateBMI(userModel);
 
 		// Then
-		assertEquals(expectedBMI, (int)actualBMI, 0.01, "The BMI calculation should match the expected value.");
+		assertEquals(expectedBMI, actualBMI, "The BMI calculation should match the expected value.");
 	}
 }

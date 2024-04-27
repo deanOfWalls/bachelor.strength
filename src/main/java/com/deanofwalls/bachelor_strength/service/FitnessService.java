@@ -12,30 +12,31 @@ import org.springframework.stereotype.Service;
 public class FitnessService {
 
     public CalculationsModel calculationsModel(UserModel userModel) {
-        double bmi = calculateBMI(userModel);
-        double tdee = calculateTDEE(userModel);
+        int bmi = calculateBMI(userModel);
+        int tdee = calculateTDEE(userModel);
         int recommendedProtein = calculateProteinIntake(userModel);
         int recommendedCalories = calculateCaloriesForHypertrophy(userModel); // Assuming you will implement this
 
         return new CalculationsModel(bmi, tdee, recommendedProtein, recommendedCalories);
     }
 
-    public double calculateBMI(UserModel userModel) {
-        return (int)(userModel.getWeight() * 0.453592) / (Math.pow(userModel.getHeight() / 100, 2));
+    public int calculateBMI(UserModel userModel) {
+        double result = (userModel.getWeight() * 0.453592) / (Math.pow(userModel.getHeight() / 100.0, 2));
+        return (int) Math.round(result);
     }
 
 
-    public double calculateTDEE(UserModel userModel) {
+    public int calculateTDEE(UserModel userModel) {
         String gender = userModel.getGender();
-
-        if(gender.equalsIgnoreCase("male")){
-            return (int)(10 * (userModel.getWeight() / 2.20462) + 6.25 * userModel.getHeight() - 5 * userModel.getAge() + 5) * 1.55;
+        double result;
+        if (gender.equalsIgnoreCase("male")) {
+            result = (10 * (userModel.getWeight() / 2.20462) + 6.25 * userModel.getHeight() - 5 * userModel.getAge() + 5) * 1.55;
+        } else if (gender.equalsIgnoreCase("female")) {
+            result = (10 * (userModel.getWeight() / 2.20462) + 6.25 * userModel.getHeight() - 5 * userModel.getAge() - 161) * 1.55;
+        } else {
+            return 0;
         }
-        else if(gender.equalsIgnoreCase("female")){
-            return (int)(10 * (userModel.getWeight() / 2.20462) + 6.25 * userModel.getHeight() - 5 * userModel.getAge() - 161) * 1.55;
-        }
-        else
-        return 0;
+        return (int) Math.round(result);
     }
 
     public int calculateProteinIntake(UserModel userModel) {

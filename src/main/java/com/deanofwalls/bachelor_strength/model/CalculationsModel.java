@@ -1,12 +1,12 @@
 package com.deanofwalls.bachelor_strength.model;
 
 public class CalculationsModel {
-    private double bmi;
-    private double tdee;
+    private int bmi;
+    private int tdee;
     private int recommendedProtein;
     private int recommendedCalories;
 
-    public CalculationsModel(double bmi, double tdee, int recommendedProtein, int recommendedCalories) {
+    public CalculationsModel(int bmi, int tdee, int recommendedProtein, int recommendedCalories) {
         this.bmi = bmi;
         this.tdee = tdee;
         this.recommendedProtein = recommendedProtein;
@@ -17,7 +17,7 @@ public class CalculationsModel {
         return bmi;
     }
 
-    public void setBMI(double bmi) {
+    public void setBMI(int bmi) {
         this.bmi = bmi;
     }
 
@@ -25,7 +25,7 @@ public class CalculationsModel {
         return tdee;
     }
 
-    public void setTDEE(double tdee) {
+    public void setTDEE(int tdee) {
         this.tdee = tdee;
     }
 

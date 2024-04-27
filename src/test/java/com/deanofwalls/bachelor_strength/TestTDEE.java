@@ -18,10 +18,10 @@ public class TestTDEE {
     public void testTDEE(){
         //Given: setup our test data
         UserModel userModel = new UserModel(30, 180, 170, "male");
-        double expectedTDEE = 2714; //rounded value
+        int expectedTDEE = 2714; //rounded value
 
         //When
-        double actualTDEE = Math.round(fitnessService.calculateTDEE(userModel));
+        int actualTDEE = Math.round(fitnessService.calculateTDEE(userModel));
 
         //Then
         assertEquals(expectedTDEE, actualTDEE);
