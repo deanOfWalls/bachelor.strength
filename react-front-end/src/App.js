@@ -66,7 +66,7 @@ function App() {
             name="height"
             value={formData.height}
             onChange={handleChange}
-            placeholder="Height"
+            placeholder="Height (cm)"
             className="input-field"
             maxLength="6"
           />
@@ -77,7 +77,7 @@ function App() {
             name="weight"
             value={formData.weight}
             onChange={handleChange}
-            placeholder="Weight"
+            placeholder="Weight (lbs)"
             className="input-field"
             maxLength="6"
           />
@@ -88,7 +88,7 @@ function App() {
             name="gender"
             value={formData.gender}
             onChange={handleChange}
-            placeholder="Gender"
+            placeholder="Gender (Male/Female)"
             className="input-field"
             maxLength="6"
           />
@@ -104,6 +104,31 @@ function App() {
           <p>Recommended Protein: {formData.recommendedProtein}</p>
           <p>Recommended Calories: {formData.recommendedCalories}</p>
         </div>
+      </div>
+
+      <div className="box">
+        <h2>Weekly Hypertrophy-Focused Routine:</h2>
+        <h3>Monday & Thursday (Lower Body + Calves)</h3>
+        <ul>
+          <li>Barbell Squats: 4 sets of 8 reps</li>
+          <li>Deadlifts: 3 sets of 6-8 reps (alternate between standard and Romanian deadlifts for variety and balanced development)</li>
+          <li>Calf Raises: 4 sets of 15 reps with added weight (if possible)</li>
+        </ul>
+        <h3>Tuesday & Friday (Upper Body - Push)</h3>
+        <ul>
+          <li>Bench Press: 4 sets of 8 reps</li>
+          <li>Seated Dumbbell Shoulder Press: 4 sets of 8 reps</li>
+          <li>Tricep Dips: Start with Bench Dips or Negative Dips and progress to 3 sets of 8-10 reps as strength improves</li>
+        </ul>
+        <h3>Wednesday & Saturday (Upper Body - Pull + Core)</h3>
+        <ul>
+          <li>Barbell Rows (using EZ curl bar): 4 sets of 8 reps</li>
+          <li>Pull-Ups/Chin-Ups: 3 sets to failure</li>
+          <li>Dumbbell Curls: 3 sets of 10-12 reps</li>
+          <li>Hammer Curls: 3 sets of 10-12 reps</li>
+          <li>Leg Raises: 4 sets of 12 reps</li>
+        </ul>
+        <p>Rest Day: Sunday</p>
       </div>
     </div>
   );

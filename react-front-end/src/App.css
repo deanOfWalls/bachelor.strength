@@ -1,8 +1,13 @@
+body {
+  background-color: black;
+  color: white; /* Set text color to white */
+}
+
 .container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  align-items: flex-start;
+  margin-top: 20px;
 }
 
 .box {
@@ -11,6 +16,7 @@
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
 .form-group {
@@ -33,17 +39,32 @@
 .btn {
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
-  color: #fff;
+  background-color: red; /* Change button color to red */
+  color: white; /* Set button text color to white */
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .btn:hover {
-  background-color: #0056b3;
+  background-color: #d60000; /* Darker red on hover */
 }
 
 .placeholders p {
   margin-bottom: 5px;
+}
+
+/* Tooltip styles */
+.tooltip {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 1;
+}
+
+.tooltip p {
+  margin: 0;
 }
