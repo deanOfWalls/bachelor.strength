@@ -516,7 +516,8 @@ vendor/
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -829,7 +830,7 @@ google-services.json
 
 ### ReactNative.Gradle Stack ###
 .gradle
-**/build/
+src/main/resources/static/build/
 !src/**/build/
 
 # Ignore Gradle GUI config
