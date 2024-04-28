@@ -1,46 +1,20 @@
-# CRUD Template
+# Bachelor Fitness
 
-This project is a Maven-based CRUD Template using Java, Spring Boot, and an H2 database. It's designed as a starting point for beginners learning Java, Spring Boot, and basic CRUD operations.
+Bachelor Fitness is a fitness calculator application designed to help users track and manage their fitness goals by calculating various metrics based on inputted bodily measurements. Whether you're looking to track your BMI, Total Daily Energy Expenditure (TDEE), or receive recommendations for protein intake and calorie consumption, Bachelor Fitness has you covered.
 
-## Setup
+## Technologies Used
 
-### Option 1: Download as ZIP (Recommended for a Fresh Start)
+Bachelor Fitness is built using the following technologies:
 
-1. Navigate to the GitHub repository page.
-2. Look for the “Code” button and click it.
-3. Choose "Download ZIP".
-4. Extract the ZIP file in your desired location to start working on the project.
+- **Frontend:** React.js
+- **Backend:** Node.js with Express.js
+- **Styling:** CSS
 
-### Option 2: Clone the Repository (and Remove Git History)
+## Features
 
-1. Clone the repository.
-2. Navigate to the project directory in the terminal.
-3. Run `rm -rf .git` to remove the existing `.git` directory. This will delete the current Git history.
-4. Initialize a new Git repository with `git init`, if you wish to use Git for version control.
+- **BMI Calculation:** Easily calculate your Body Mass Index (BMI) by inputting your age, height, weight, and gender.
+- **TDEE Estimation:** Determine your Total Daily Energy Expenditure (TDEE) to better understand your daily caloric needs based on your activity level.
+- **Recommended Intake:** Receive recommendations for protein intake and daily calorie consumption tailored to your fitness goals.
+- **Weekly Hypertrophy-Focused Routine:** Access a weekly hypertrophy-focused workout routine designed to help you build muscle mass and strength.
 
-## Customization
-
-After obtaining the template (either by downloading the ZIP or cloning and removing the `.git` directory), you can make it your own:
-
-1. **Update Project Details**:
-    - Modify the `pom.xml` file to reflect your project's groupId, artifactId, and version.
-    - Update the `README.md` to suit your project.
-
-2. **Develop Your Application**:
-    - Add your own code, models, controllers, etc., to build your application.
-
-## Dockerfile Usage
-
-This template includes a Dockerfile for easy deployment using Docker. To use it:
-
-1. Ensure the Java version in the Dockerfile matches your project requirements.
-2. Replace `com.deanofwalls.bachelor_strength.MainApplication` in the ENTRYPOINT command with your project's main class.
-3. If your project doesn't use a Maven wrapper (`mvnw`), update the Dockerfile to use your local Maven installation.
-4. Optionally, adjust the Maven build command to include or exclude test execution as per your needs.
-5. Build and run your Docker image for a containerized version of your application.
-
-This Dockerfile uses a multi-stage build process for efficiency and smaller image size.
-
-## License
-
-This project is licensed under the Creative Commons Zero v1.0 Universal License.
+Bachelor Fitness offers a comprehensive set of tools to support your fitness journey, whether you're a beginner or an experienced fitness enthusiast.
